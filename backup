@@ -1,0 +1,7 @@
+#/usr/bin/env bash
+
+cp ~/.bashrc .
+cp ~/.tmux.conf .
+cp ~/.ignore .
+cp ~/.config/nvim/ .
+cp ~/.config/alacritty/ .
