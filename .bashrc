@@ -48,3 +48,4 @@ o() {
 # Aliases
 alias sd="cd ~ && cd \$(fd -H -t d | fzf)"
 
+source /usr/share/fzf/shell/key-bindings.bash
