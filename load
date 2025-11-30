@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+function backup() {
+    folder="backup/backup-$(date +%s)/"
+    mkdir -p $folder
+    mv ~/.bashrc $folder
+    mv ~/.tmux.conf $folder
+    mv ~/.ignore $folder
+    mv ~/.config/nvim $folder
+    mv ~/.config/alacritty $folder
+}
+
+backup
+cp .bashrc ~/
+cp .tmux.conf ~/
+cp .ignore ~/
+cp nvim ~/.config/ -r
+cp alacritty ~/.config/ -r
