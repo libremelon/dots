@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function backup() {
-    folder="backup/backup-$(date +%s)/"
+    folder=".backup/backup-$(date +%s)/"
     mkdir -p $folder
     mv ~/.bashrc $folder
     mv ~/.tmux.conf $folder
