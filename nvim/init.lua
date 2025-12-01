@@ -713,6 +713,7 @@ require('lazy').setup({
       vim.lsp.config['clangd'] = {
         cmd = { 'clangd' },
       }
+      vim.lsp.enable 'clangd'
 
       -- Brief aside: **What is LSP?**
       --
