@@ -47,6 +47,7 @@ o() {
 
 # Aliases
 alias sd="cd ~ && cd \"\$(fd -H -t d | fzf)\""
+alias lg="lazygit"
 
 source $PREFIX/share/fzf/key-bindings.bash 2> /dev/null || source /usr/share/fzf/shell/key-bindings.bash 
 
