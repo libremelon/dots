@@ -710,7 +710,7 @@ require('lazy').setup({
       'saghen/blink.cmp',
     },
     config = function()
-      require('lspconfig').clangd.setup {
+      vim.lsp.config['clangd'] = {
         cmd = { 'clangd' },
       }
 
