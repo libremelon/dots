@@ -710,6 +710,10 @@ require('lazy').setup({
       'saghen/blink.cmp',
     },
     config = function()
+      require('lspconfig').clangd.setup {
+        cmd = { 'clangd' },
+      }
+
       -- Brief aside: **What is LSP?**
       --
       -- LSP is an initialism you've probably heard, but might not understand what it is.
@@ -899,12 +903,6 @@ require('lazy').setup({
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
-        --
-
-        clangd = {
-          cmd = { 'clangd' },
-        },
-
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
