@@ -697,7 +697,6 @@ require('lazy').setup({
           },
           servers = {
             racket_langserver = {},
-            ccls = {},
           },
         },
       },
@@ -901,6 +900,10 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+
+        clangd = {
+          cmd = { 'clangd' },
+        },
 
         lua_ls = {
           -- cmd = { ... },
