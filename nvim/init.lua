@@ -485,6 +485,18 @@ require('lazy').setup({
   },
 
   --[[ Pluggers ]]
+  {
+    'kawre/leetcode.nvim',
+    build = ':UpdateRemotePlugins', -- if you have `nvim-treesitter` installed
+    dependencies = {
+      -- include a picker of your choice, see picker section for more details
+      'nvim-lua/plenary.nvim',
+      'MunifTanjim/nui.nvim',
+    },
+    opts = {
+      -- configuration goes here
+    },
+  },
 
   -- Tree-view based file browser
   {
@@ -999,6 +1011,14 @@ require('lazy').setup({
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
       },
+
+      -- formatters = {
+      --   ['clang-format'] = {
+      --     prepend_args = {
+      --       '-style={BasedOnStyle: Google, IndentWidth: 4, UseTab: Never}',
+      --     },
+      --   },
+      -- },
     },
   },
 
@@ -1109,14 +1129,12 @@ require('lazy').setup({
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    'nickkadutskyi/jb.nvim',
+    'libremelon/jb.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
       ---@diagnostic disable-next-line: missing-fields
 
-      require('jb').setup {
-        transparent = true,
-      }
+      require('jb').setup {}
 
       -- Load the colorscheme here.
       vim.cmd.colorscheme 'jb'
