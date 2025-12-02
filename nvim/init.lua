@@ -1141,6 +1141,8 @@ require('lazy').setup({
 
       -- Set command area color
       vim.api.nvim_set_hl(0, 'MsgArea', { bg = '#212121' })
+      -- Force background color
+      vim.api.nvim_set_hl(0, 'Normal', { bg = '#181818' })
     end,
   },
 
