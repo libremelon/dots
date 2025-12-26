@@ -34,7 +34,7 @@ export PATH="/home/omen/.pixi/bin:$PATH"
 
 # run cpp code 
 rcpp() {
-    clang++ "$1" -o out && ./out && rm -r out
+    clang++ "$1" -o out -std=c++23 && ./out && rm -r out
 }
 
 o() {
