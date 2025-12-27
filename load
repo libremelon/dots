@@ -16,3 +16,4 @@ cp .tmux.conf ~/
 cp .ignore ~/
 cp nvim ~/.config/ -r
 cp alacritty ~/.config/ -r
+git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
