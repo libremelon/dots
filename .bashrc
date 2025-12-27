@@ -49,5 +49,5 @@ source $PREFIX/share/fzf/key-bindings.bash 2> /dev/null || source /usr/share/fzf
 
 TMUX_CONF="$HOME/.config/tmux/tmux.conf"
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-    exec tmux -f "$TMUX_CONF" new-session -A -s main
+    exec tmux -f "$TMUX_CONF" new-session
 fi
