@@ -4,18 +4,18 @@ function backup() {
     folder=".backup/backup-$(date +%s)/"
     mkdir -p $folder
     mv ~/.bashrc $folder
-    mv ~/.tmux.conf $folder
     mv ~/.ignore $folder
     mv ~/.config/nvim $folder
     mv ~/.config/alacritty $folder
+    mv ~/.config/tmux $folder
 }
 
 backup
 cp .bashrc ~/
-cp .tmux.conf ~/
 cp .ignore ~/
 cp nvim ~/.config/ -r
 cp alacritty ~/.config/ -r
+cp tmux ~/.config/ -r
 
 if [[ -n $(ls ~/.config/alacritty/themes) ]]; then
     git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes

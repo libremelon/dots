@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cp ~/.bashrc .
-cp ~/.tmux.conf .
 cp ~/.ignore .
 cp ~/.config/nvim/ . -r
 cp ~/.config/alacritty/ . -r
+cp ~/.config/tmux/ . -r
