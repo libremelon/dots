@@ -24,10 +24,6 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/omen/.lmstudio/bin"
-# End of LM Studio CLI section
-
 # Configure Bitwarden SSH agent
 export SSH_AUTH_SOCK=/home/omen/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
 export PATH="/home/omen/.pixi/bin:$PATH"
@@ -50,6 +46,8 @@ alias sd="cd ~ && cd \"\$(fd -H -t d | fzf)\""
 alias lg="lazygit"
 
 source $PREFIX/share/fzf/key-bindings.bash 2> /dev/null || source /usr/share/fzf/shell/key-bindings.bash 
+
+[[ $- != *i* ]] && return # code below this is executed only in interactive terminals
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux

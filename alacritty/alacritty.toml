@@ -2,8 +2,8 @@
 normal = { family = "FiraCode Nerd Font Mono"}
 # size = 12.25
 
-[terminal.shell]
-program = "tmux"
+# [terminal.shell]
+# program = "tmux"
 
 [general]
 import = [
