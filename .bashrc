@@ -25,7 +25,7 @@ fi
 unset rc
 
 # Configure Bitwarden SSH agent
-export SSH_AUTH_SOCK=/home/omen/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
+export SSH_AUTH_SOCK="$HOME/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"
 export PATH="/home/omen/.pixi/bin:$PATH"
 
 # run cpp code 
