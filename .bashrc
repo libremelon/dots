@@ -47,16 +47,7 @@ alias lg="lazygit"
 
 source $PREFIX/share/fzf/key-bindings.bash 2> /dev/null || source /usr/share/fzf/shell/key-bindings.bash 
 
-if [[ -n "$SSH_TTY" ]]; then
-    cp -f ~/.config/tmux/tmux-ssh.conf ~/.tmux.conf
-else
-    cp -f ~/.config/tmux/tmux.conf ~/.tmux.conf
-fi
-
 TMUX_CONF="$HOME/.config/tmux/tmux.conf"
-if [[ -n "$SSH_TTY" ]]; then
-    TMUX_CONF="$HOME/.config/tmux/tmux-ssh.conf"
-fi
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
     exec tmux -f "$TMUX_CONF" new-session -A -s main
 fi
