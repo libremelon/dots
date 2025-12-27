@@ -47,8 +47,8 @@ alias lg="lazygit"
 
 source $PREFIX/share/fzf/key-bindings.bash 2> /dev/null || source /usr/share/fzf/shell/key-bindings.bash 
 
-[[ $- != *i* ]] && return # code below this is executed only in interactive terminals
-
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
+if [[ $- != *i* ]]; then # code below this is executed only in interactive terminals
+    if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+        exec tmux
+    fi
 fi
