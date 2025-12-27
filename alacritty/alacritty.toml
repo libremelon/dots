@@ -20,3 +20,6 @@ action = "ToggleFullscreen"
 [window.padding]
 x = 25 
 y = 25
+
+[env]
+TERM = "alacritty"

@@ -53,9 +53,10 @@ else
     cp -f ~/.config/tmux/tmux.conf ~/.tmux.conf
 fi
 
-if [[ $- == *i* && "$TERM_PROGRAM" != "vscode" ]]; then 
-    if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-        tmux
-    fi
+TMUX_CONF="$HOME/.config/tmux/tmux.conf"
+if [[ -n "$SSH_TTY" ]]; then
+    TMUX_CONF="$HOME/.config/tmux/tmux-ssh.conf"
 fi
-
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+    exec tmux -f "$TMUX_CONF" new-session -A -s main
+fi
