@@ -47,7 +47,7 @@ alias lg="lazygit"
 
 source $PREFIX/share/fzf/key-bindings.bash 2> /dev/null || source /usr/share/fzf/shell/key-bindings.bash 
 
-if [[ $- == *i* && "$TERM_PROGRAM" != "vscode" && -z "$SSH_CONNECTION" && -z "$SSH_TTY" ]]; then 
+if [[ $- == *i* && "$TERM_PROGRAM" != "vscode" ]]; then 
     if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
         tmux
     fi
