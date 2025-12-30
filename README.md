@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This repository has been moved to [Codeberg](https://codeberg.org/libremelon/dots)
+
 # Dotfiles 
 
 my configurations for
