@@ -23,3 +23,6 @@ y = 25
 
 [env]
 TERM = "alacritty"
+
+[terminal]
+osc52 = "CopyPaste"
